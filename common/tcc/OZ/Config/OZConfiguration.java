@@ -71,6 +71,8 @@ public class OZConfiguration {
     public static int EmeraldStairID;
     public static int EmeraldWallID;
     public static int EmeraldDoorBlockID;
+    public static int EmeraldGlassID;
+    public static int EmeraldGlassPaneID;
 
     // Items
     public static int EmeraldDoorItemID;
@@ -158,6 +160,8 @@ public class OZConfiguration {
         EmeraldStairID = cfg.get(Configuration.CATEGORY_BLOCK, "Emerald Stair", 1407).getInt();
         EmeraldWallID = cfg.get(Configuration.CATEGORY_BLOCK, "Emerald Wall", 1408).getInt();
         EmeraldDoorBlockID = cfg.get(Configuration.CATEGORY_BLOCK, "Emerald Door Block", 1409).getInt();
+        EmeraldGlassID = cfg.get(Configuration.CATEGORY_BLOCK, "Emerald Glass", 1410).getInt();
+        EmeraldGlassPaneID = cfg.get(Configuration.CATEGORY_BLOCK, "Emerald Glass Pane", 1411).getInt();
 
         cfg.save();
     }

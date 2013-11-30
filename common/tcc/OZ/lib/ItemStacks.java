@@ -16,12 +16,11 @@ public class ItemStacks {
     
     // Vanilla Items
     public static final ItemStack iron = new ItemStack(Item.ingotIron, 1, 0);
+    public static final ItemStack emerald = new ItemStack(Item.emerald, 1, 0);
     
-    // Vanilla Wool
+    // Vanilla Blocks
     public static final ItemStack whitewool = new ItemStack(Block.cloth, 1, 0);
     public static final ItemStack lightbluewool = new ItemStack(Block.cloth, 1, 3);
-    
-    // Vanilla Stained Clay
     public static final ItemStack whitestainedclay = new ItemStack(Block.stainedClay, 1, 0);
     public static final ItemStack orangestainedclay = new ItemStack(Block.stainedClay, 1, 1);
     public static final ItemStack magentastainedclay = new ItemStack(Block.stainedClay, 1, 2);
@@ -38,12 +37,13 @@ public class ItemStacks {
     public static final ItemStack greenstainedclay = new ItemStack(Block.stainedClay, 1, 13);
     public static final ItemStack redstainedclay = new ItemStack(Block.stainedClay, 1, 14);
     public static final ItemStack blackstainedclay = new ItemStack(Block.stainedClay, 1, 15);
+    public static final ItemStack glass = new ItemStack(Block.glass, 1, 0);
     
     //OZ Blocks
     public static final ItemStack emeraldsmooth = new ItemStack(ModBlocks.EmeraldSmooth, 1, 0);
     public static final ItemStack emeraldstone = new ItemStack(ModBlocks.EmeraldStone, 1, 0);
     public static final ItemStack emeraldbrick = new ItemStack(ModBlocks.EmeraldBrick, 1, 0);
     public static final ItemStack emeraldcarved = new ItemStack(ModBlocks.EmeraldCarved, 1, 0);
-    //public static final ItemStack door = new ItemStack(ModItems.EmeraldDoor, 1);
+    public static final ItemStack emeraldglass = new ItemStack(ModBlocks.EmeraldGlass, 1, 0);
 
 }

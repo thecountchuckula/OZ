@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import tcc.OZ.Config.OZConfiguration;
 import tcc.OZ.lib.ItemStacks;
+import tcc.OZ.lib.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -77,6 +78,8 @@ public class ModBlocks {
     public static Block EmeraldStair;
     public static Block EmeraldWall;
     public static Block EmeraldDoor;
+    public static Block EmeraldGlass;
+    public static Block EmeraldGlassPane;
 
     public static void init() {
         defBlocks();
@@ -88,123 +91,186 @@ public class ModBlocks {
     public static void defBlocks() {
     	//Clay Bricks
         BlackClayBrick = new BlockBrick(OZConfiguration.BlackClayBrickID, Material.rock)
-        .setUnlocalizedName("BlackClayBrick");
+        .setUnlocalizedName("BlackClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BlueClayBrick = new BlockBrick(OZConfiguration.BlueClayBrickID, Material.rock)
-        .setUnlocalizedName("BlueClayBrick");
+        .setUnlocalizedName("BlueClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BrownClayBrick = new BlockBrick(OZConfiguration.BrownClayBrickID, Material.rock)
-        .setUnlocalizedName("BrownClayBrick");
+        .setUnlocalizedName("BrownClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         CyanClayBrick = new BlockBrick(OZConfiguration.CyanClayBrickID, Material.rock)
-        .setUnlocalizedName("CyanClayBrick");
+        .setUnlocalizedName("CyanClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GrayClayBrick = new BlockBrick(OZConfiguration.GrayClayBrickID, Material.rock)
-        .setUnlocalizedName("GrayClayBrick");
+        .setUnlocalizedName("GrayClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GreenClayBrick = new BlockBrick(OZConfiguration.GreenClayBrickID, Material.rock)
-        .setUnlocalizedName("GreenClayBrick");
+        .setUnlocalizedName("GreenClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightBlueClayBrick = new BlockBrick(OZConfiguration.LightBlueClayBrickID, Material.rock)
-        .setUnlocalizedName("LightBlueClayBrick");
+        .setUnlocalizedName("LightBlueClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightGrayClayBrick = new BlockBrick(OZConfiguration.LightGrayClayBrickID, Material.rock)
-        .setUnlocalizedName("LightGrayClayBrick");
+        .setUnlocalizedName("LightGrayClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LimeClayBrick = new BlockBrick(OZConfiguration.LimeClayBrickID, Material.rock)
-        .setUnlocalizedName("LimeClayBrick");
+        .setUnlocalizedName("LimeClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         MagentaClayBrick = new BlockBrick(OZConfiguration.MagentaClayBrickID, Material.rock)
-        .setUnlocalizedName("MagentaClayBrick");
+        .setUnlocalizedName("MagentaClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         OrangeClayBrick = new BlockBrick(OZConfiguration.OrangeClayBrickID, Material.rock)
-        .setUnlocalizedName("OrangeClayBrick");
+        .setUnlocalizedName("OrangeClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PinkClayBrick = new BlockBrick(OZConfiguration.PinkClayBrickID, Material.rock)
-        .setUnlocalizedName("PinkClayBrick");
+        .setUnlocalizedName("PinkClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PurpleClayBrick = new BlockBrick(OZConfiguration.PurpleClayBrickID, Material.rock)
-        .setUnlocalizedName("PurpleClayBrick");
+        .setUnlocalizedName("PurpleClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         RedClayBrick = new BlockBrick(OZConfiguration.RedClayBrickID, Material.rock)
-        .setUnlocalizedName("RedClayBrick");
+        .setUnlocalizedName("RedClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         WhiteClayBrick = new BlockBrick(OZConfiguration.WhiteClayBrickID, Material.rock)
-        .setUnlocalizedName("WhiteClayBrick");
+        .setUnlocalizedName("WhiteClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         YellowClayBrick = new BlockBrick(OZConfiguration.YellowClayBrickID, Material.rock)
-        .setUnlocalizedName("YellowClayBrick");
+        .setUnlocalizedName("YellowClayBrick").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
     	//Clay Brick Stairs
         BlackClayBrickStair = new BlockCustomStairs(OZConfiguration.BlackClayBrickStairID, BlackClayBrick, 0)
-        .setUnlocalizedName("BlackClayBrickStairs");
+        .setUnlocalizedName("BlackClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BlueClayBrickStair = new BlockCustomStairs(OZConfiguration.BlueClayBrickStairID, BlueClayBrick, 0)
-        .setUnlocalizedName("BlueClayBrickStairs");
+        .setUnlocalizedName("BlueClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BrownClayBrickStair = new BlockCustomStairs(OZConfiguration.BrownClayBrickStairID, BrownClayBrick, 0)
-        .setUnlocalizedName("BrownClayBrickStairs");
+        .setUnlocalizedName("BrownClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         CyanClayBrickStair = new BlockCustomStairs(OZConfiguration.CyanClayBrickStairID,  CyanClayBrick, 0)
-        .setUnlocalizedName("CyanClayBrickStairs");
+        .setUnlocalizedName("CyanClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GrayClayBrickStair = new BlockCustomStairs(OZConfiguration.GrayClayBrickStairID, GrayClayBrick, 0)
-        .setUnlocalizedName("GrayClayBrickStairs");
+        .setUnlocalizedName("GrayClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GreenClayBrickStair = new BlockCustomStairs(OZConfiguration.GreenClayBrickStairID, GreenClayBrick, 0)
-        .setUnlocalizedName("GreenClayBrickStairs");
+        .setUnlocalizedName("GreenClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightBlueClayBrickStair = new BlockCustomStairs(OZConfiguration.LightBlueClayBrickStairID, LightBlueClayBrick, 0)
-        .setUnlocalizedName("LightBlueClayBrickStairs");
+        .setUnlocalizedName("LightBlueClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightGrayClayBrickStair = new BlockCustomStairs(OZConfiguration.LightGrayClayBrickStairID, LightGrayClayBrick, 0)
-        .setUnlocalizedName("LightGrayClayBrickStairs");
+        .setUnlocalizedName("LightGrayClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LimeClayBrickStair = new BlockCustomStairs(OZConfiguration.LimeClayBrickStairID, LimeClayBrick, 0)
-        .setUnlocalizedName("LimeClayBrickStairs");
+        .setUnlocalizedName("LimeClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         MagentaClayBrickStair = new BlockCustomStairs(OZConfiguration.MagentaClayBrickStairID, MagentaClayBrick, 0)
-        .setUnlocalizedName("MagentaClayBrickStairs");
+        .setUnlocalizedName("MagentaClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         OrangeClayBrickStair = new BlockCustomStairs(OZConfiguration.OrangeClayBrickStairID, OrangeClayBrick, 0)
-        .setUnlocalizedName("OrangeClayBrickStairs");
+        .setUnlocalizedName("OrangeClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PinkClayBrickStair = new BlockCustomStairs(OZConfiguration.PinkClayBrickStairID, PinkClayBrick, 0)
-        .setUnlocalizedName("PinkClayBrickStairs");
+        .setUnlocalizedName("PinkClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PurpleClayBrickStair = new BlockCustomStairs(OZConfiguration.PurpleClayBrickStairID, PurpleClayBrick, 0)
-        .setUnlocalizedName("PurpleClayBrickStairs");
+        .setUnlocalizedName("PurpleClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         RedClayBrickStair = new BlockCustomStairs(OZConfiguration.RedClayBrickStairID, RedClayBrick, 0)
-        .setUnlocalizedName("RedClayBrickStairs");
+        .setUnlocalizedName("RedClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         WhiteClayBrickStair = new BlockCustomStairs(OZConfiguration.WhiteClayBrickStairID, WhiteClayBrick, 0)
-        .setUnlocalizedName("WhiteClayBrickStairs");
+        .setUnlocalizedName("WhiteClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         YellowClayBrickStair = new BlockCustomStairs(OZConfiguration.YellowClayBrickStairID, YellowClayBrick, 0)
-        .setUnlocalizedName("YellowClayBrickStairs");
+        .setUnlocalizedName("YellowClayBrickStairs").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
     	//Clay Brick Walls
         BlackClayBrickWall = new BlockCustomWall(OZConfiguration.BlackClayBrickWallID, BlackClayBrick)
-        .setUnlocalizedName("BlackClayBrickWall");
+        .setUnlocalizedName("BlackClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BlueClayBrickWall = new BlockCustomWall(OZConfiguration.BlueClayBrickWallID, BlueClayBrick)
-        .setUnlocalizedName("BlueClayBrickWall");
+        .setUnlocalizedName("BlueClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         BrownClayBrickWall = new BlockCustomWall(OZConfiguration.BrownClayBrickWallID, BrownClayBrick)
-        .setUnlocalizedName("BrownClayBrickWall");
+        .setUnlocalizedName("BrownClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         CyanClayBrickWall = new BlockCustomWall(OZConfiguration.CyanClayBrickWallID,  CyanClayBrick)
-        .setUnlocalizedName("CyanClayBrickWall");
+        .setUnlocalizedName("CyanClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GrayClayBrickWall = new BlockCustomWall(OZConfiguration.GrayClayBrickWallID, GrayClayBrick)
-        .setUnlocalizedName("GrayClayBrickWall");
+        .setUnlocalizedName("GrayClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         GreenClayBrickWall = new BlockCustomWall(OZConfiguration.GreenClayBrickWallID, GreenClayBrick)
-        .setUnlocalizedName("GreenClayBrickWall");
+        .setUnlocalizedName("GreenClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightBlueClayBrickWall = new BlockCustomWall(OZConfiguration.LightBlueClayBrickWallID, LightBlueClayBrick)
-        .setUnlocalizedName("LightBlueClayBrickWall");
+        .setUnlocalizedName("LightBlueClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LightGrayClayBrickWall = new BlockCustomWall(OZConfiguration.LightGrayClayBrickWallID, LightGrayClayBrick)
-        .setUnlocalizedName("LightGrayClayBrickWall");
+        .setUnlocalizedName("LightGrayClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         LimeClayBrickWall = new BlockCustomWall(OZConfiguration.LimeClayBrickWallID, LimeClayBrick)
-        .setUnlocalizedName("LimeClayBrickWall");
+        .setUnlocalizedName("LimeClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         MagentaClayBrickWall = new BlockCustomWall(OZConfiguration.MagentaClayBrickWallID, MagentaClayBrick)
-        .setUnlocalizedName("MagentaClayBrickWall");
+        .setUnlocalizedName("MagentaClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         OrangeClayBrickWall = new BlockCustomWall(OZConfiguration.OrangeClayBrickWallID, OrangeClayBrick)
-        .setUnlocalizedName("OrangeClayBrickWall");
+        .setUnlocalizedName("OrangeClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PinkClayBrickWall = new BlockCustomWall(OZConfiguration.PinkClayBrickWallID, PinkClayBrick)
-        .setUnlocalizedName("PinkClayBrickWall");
+        .setUnlocalizedName("PinkClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         PurpleClayBrickWall = new BlockCustomWall(OZConfiguration.PurpleClayBrickWallID, PurpleClayBrick)
-        .setUnlocalizedName("PurpleClayBrickWall");
+        .setUnlocalizedName("PurpleClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         RedClayBrickWall = new BlockCustomWall(OZConfiguration.RedClayBrickWallID, RedClayBrick)
-        .setUnlocalizedName("RedClayBrickWall");
+        .setUnlocalizedName("RedClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         WhiteClayBrickWall = new BlockCustomWall(OZConfiguration.WhiteClayBrickWallID, WhiteClayBrick)
-        .setUnlocalizedName("WhiteClayBrickWall");
+        .setUnlocalizedName("WhiteClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         YellowClayBrickWall = new BlockCustomWall(OZConfiguration.YellowClayBrickWallID, YellowClayBrick)
-        .setUnlocalizedName("YellowClayBrickWall");
+        .setUnlocalizedName("YellowClayBrickWall").setHardness(1.25F)
+        .setResistance(7.0F).setStepSound(Block.soundStoneFootstep);
         //Emerald Blocks
         EmeraldBrick = new BlockBrick(OZConfiguration.EmeraldBrickID, Material.rock)
-        .setUnlocalizedName("EmeraldBrick").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldBrick").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldStone = new MultiSidedBlock(OZConfiguration.EmeraldStoneID, Material.rock)
-        .setUnlocalizedName("EmeraldStone").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldStone").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldCarved = new MultiSidedBlock(OZConfiguration.EmeraldCarvedID, Material.rock)
-        .setUnlocalizedName("EmeraldCarved").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldCarved").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldSmooth = new MultiSidedBlock(OZConfiguration.EmeraldSmoothID, Material.rock)
-        .setUnlocalizedName("EmeraldSmooth").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldSmooth").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         // Non-Standard Emerald Blocks
         EmeraldBrickStair = new BlockCustomStairs(OZConfiguration.EmeraldBrickStairID, EmeraldBrick, 0)
-        .setUnlocalizedName("EmeraldBrickStair").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldBrickStair").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldBrickWall = new BlockCustomWall(OZConfiguration.EmeraldBrickWallID, EmeraldBrick)
-        .setUnlocalizedName("EmeraldBrickWall").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldBrickWall").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldStair = new BlockCustomStairs(OZConfiguration.EmeraldStairID, EmeraldStone, 0)
-        .setUnlocalizedName("EmeraldStair").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldStair").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldWall = new BlockCustomWall(OZConfiguration.EmeraldWallID, EmeraldStone)
-        .setUnlocalizedName("EmeraldWall").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldWall").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
         EmeraldDoor = new BlockCustomDoor(OZConfiguration.EmeraldDoorBlockID, Material.rock,EmeraldStone)
-        .setUnlocalizedName("EmeraldDoor").setLightValue(1F).setLightOpacity(0);
+        .setUnlocalizedName("EmeraldDoor").setLightValue(1F).setLightOpacity(0).setHardness(5.0F)
+        .setResistance(10.0F).setStepSound(Block.soundMetalFootstep);
+        EmeraldGlass = new BlockCustomGlass(OZConfiguration.EmeraldGlassID, "EmeraldGlass", Material.glass, false)
+        .setUnlocalizedName("EmeraldGlass").setLightValue(1F).setLightOpacity(0).setHardness(.3F)
+        .setStepSound(Block.soundGlassFootstep);
+        EmeraldGlassPane = new BlockCustomPane(OZConfiguration.EmeraldGlassPaneID, Reference.MOD_ID.toLowerCase() + ":" + "EmeraldGlass", Reference.MOD_ID.toLowerCase() + ":" + "EmeraldGlassPane_top", Material.glass, false)
+        .setUnlocalizedName("EmeraldGlassPane").setLightValue(1F).setLightOpacity(0).setHardness(.3F)
+        .setStepSound(Block.soundGlassFootstep);
     }
 
     public static void initHarvestLevels() {
@@ -269,6 +335,8 @@ public class ModBlocks {
         MinecraftForge.setBlockHarvestLevel(EmeraldBrickWall, "Pickaxe", 3);
         MinecraftForge.setBlockHarvestLevel(EmeraldStair, "Pickaxe", 3);
         MinecraftForge.setBlockHarvestLevel(EmeraldStone, "Pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(EmeraldGlass, "Pickaxe", 0);
+        MinecraftForge.setBlockHarvestLevel(EmeraldGlassPane, "Pickaxe", 0);
     }
 
     public static void initGameRegistry() {
@@ -333,6 +401,8 @@ public class ModBlocks {
         GameRegistry.registerBlock(EmeraldBrickWall, "EmeraldBrickWall");
         GameRegistry.registerBlock(EmeraldStair, "EmeraldStair");
         GameRegistry.registerBlock(EmeraldWall, "EmeraldWall");
+        GameRegistry.registerBlock(EmeraldGlass, "EmeraldGlass");
+        GameRegistry.registerBlock(EmeraldGlassPane, "EmeraldGlassPAne");
     }
 
     public static void initCrafting() {
@@ -427,6 +497,8 @@ public class ModBlocks {
         GameRegistry.addRecipe(new ItemStack(EmeraldStair, 4), "  e", " ee", "eee", 'e', ItemStacks.emeraldstone);
         GameRegistry.addRecipe(new ItemStack(EmeraldStair, 4), "e  ", "ee ", "eee", 'e', ItemStacks.emeraldstone);
         GameRegistry.addRecipe(new ItemStack(EmeraldWall, 6), "eee", "eee", 'e', ItemStacks.emeraldstone);
+        GameRegistry.addRecipe(new ItemStack(EmeraldGlass, 8), "ggg", "geg", "ggg", 'e', ItemStacks.emerald, 'g', ItemStacks.glass);
+        GameRegistry.addRecipe(new ItemStack(EmeraldGlassPane, 16), "eee", "eee", 'e', ItemStacks.emeraldglass);
     }
 
     public static void initLanguageRegistry() {
@@ -495,5 +567,7 @@ public class ModBlocks {
         LanguageRegistry.addName(EmeraldBrickWall, "Emerald Wall");
         LanguageRegistry.addName(EmeraldStair, "Emerald Stairs");
         LanguageRegistry.addName(EmeraldWall, "Emerald Wall");
+        LanguageRegistry.addName(EmeraldGlass, "Emerald Glass");
+        LanguageRegistry.addName(EmeraldGlassPane, "Emerald Glass Pane");
     }
 }
